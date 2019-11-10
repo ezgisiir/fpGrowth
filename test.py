@@ -51,5 +51,11 @@ tree.add_words(words)
 words = ['K', 'E', 'M']
 tree.add_words(words)
 
+words = ['K', 'M', 'Y']
+tree.add_words(words)
+
+words = ['K', 'E', 'O']
+tree.add_words(words)
+
 
 print('Gokhan')
