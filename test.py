@@ -1,1 +1,2 @@
 print('Ezgim')
+print('Gokhan')
