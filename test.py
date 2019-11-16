@@ -16,6 +16,7 @@ class Tree:
 
     def __init__(self):
         self.root = TreeNode(None, None, None)
+        self.word_nodes = dict()
 
     def add_words(self, words_to_add):
         node = self.root
@@ -23,8 +24,11 @@ class Tree:
 
         for word in words_to_add:
             matching_node = None
+            if word not in self.word_nodes:
+                self.word_nodes[word] = []
             if children is None or len(children) == 0:
                 matching_node = add_child_to_parent(node, word)
+                self.word_nodes[word].append(matching_node)
             else:
                 child_found = False
                 for child in children:
@@ -35,6 +39,7 @@ class Tree:
 
                 if not child_found:
                     matching_node = add_child_to_parent(node, word)
+                    self.word_nodes[word].append(matching_node)
 
             node = matching_node
             children = node.next
