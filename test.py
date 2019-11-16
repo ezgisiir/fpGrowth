@@ -12,6 +12,20 @@ def add_child_to_parent(parent, value):
     return word_node
 
 
+class ConditionalPatternBase:
+
+    def __init__(self, freq, list_of_word):
+        self.freq = freq
+        self.words = list_of_word
+        self.word_set = frozenset(list_of_word)
+
+    def get_size(self):
+        return len(self.words)
+
+    def contains(self, word):
+        return word in self.word_set
+
+
 class Tree:
 
     def __init__(self):
@@ -44,6 +58,24 @@ class Tree:
             node = matching_node
             children = node.next
 
+    def get_conditional_pattern_base(self, word_sample):
+        conditional_pattern_base_list = []
+        word_nodes = self.word_nodes[word_sample]
+
+        for node in word_nodes:
+            freq = node.freq
+            parent_words = []
+
+            parent = node.parent
+            while parent is not None:
+                if parent.value is not None:
+                    parent_words.append(parent.value)
+                parent = parent.parent
+
+            conditional_pattern_base_list.append(ConditionalPatternBase(freq, parent_words))
+
+        return conditional_pattern_base_list
+
 
 tree = Tree()
 
@@ -62,5 +94,5 @@ tree.add_words(words)
 words = ['K', 'E', 'O']
 tree.add_words(words)
 
-
+conditional_pattern_list = tree.get_conditional_pattern_base('O')
 print('Gokhan')
