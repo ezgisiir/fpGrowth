@@ -25,6 +25,9 @@ class ConditionalPatternBase:
     def contains(self, word):
         return word in self.word_set
 
+    def get_words(self):
+        return self.words
+
 
 class Tree:
 
@@ -72,27 +75,7 @@ class Tree:
                     parent_words.append(parent.value)
                 parent = parent.parent
 
-            conditional_pattern_base_list.append(ConditionalPatternBase(freq, parent_words))
+            if len(parent_words) > 0:
+                conditional_pattern_base_list.append(ConditionalPatternBase(freq, parent_words))
 
         return conditional_pattern_base_list
-
-
-tree = Tree()
-
-words = ['K', 'E', 'M', 'O', 'Y']
-tree.add_words(words)
-
-words = ['K', 'E', 'O', 'Y']
-tree.add_words(words)
-
-words = ['K', 'E', 'M']
-tree.add_words(words)
-
-words = ['K', 'M', 'Y']
-tree.add_words(words)
-
-words = ['K', 'E', 'O']
-tree.add_words(words)
-
-conditional_pattern_list = tree.get_conditional_pattern_base('O')
-print('Gokhan')
