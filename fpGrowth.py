@@ -1,6 +1,11 @@
 from fpTree import Tree, ConditionalPatternBase
 import pandas as pd
 from functools import reduce
+from datetime import datetime
+
+dt = datetime.now()
+
+start = dt.microsecond
 
 dataSet = './adult.data'
 # dataSet = './sikko.data'
@@ -40,3 +45,11 @@ for unique_value in unique_values:
         res = list(reduce(lambda i2, j: i2 & j, (set(x) for x in list_of_word_list)))
         if len(res) > 0:
             print(res, res_freq)
+
+dt = datetime.now()
+
+end = dt.microsecond
+
+difference = end - start
+
+print('Run time:', difference, ' microseconds.')
