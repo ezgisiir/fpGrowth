@@ -7,13 +7,12 @@ dt = datetime.now()
 
 start = dt.microsecond
 
-# dataSet = './adul5.data'
-dataSet = './sikko.data'
-# dataSet = './adult-min.data'
+dataSet = './adult.data'
 df = pd.read_csv(dataSet, header=None)
+print(df.count)
 
 
-samples = [5, 10, 50, 100, 500, 1000, 5000, 10000, 999999]
+samples = [5, 10, 50, 100, 500, 1000, 5000, 10000, ]
 sample = 5
 
 for minval in range(2, 11):
