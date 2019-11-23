@@ -7,7 +7,7 @@ dt = datetime.now()
 
 start = dt.microsecond
 
-dataSet = './adult.data'
+dataSet = './adul5.data'
 # dataSet = './sikko.data'
 # dataSet = './adult-min.data'
 df = pd.read_csv(dataSet, header=None)
