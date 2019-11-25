@@ -1,0 +1,56 @@
+
+
+# This datasets produced by the R script "creating_new_adult_dataset.R"
+
+# Tests for different sample sizes (N) , I used them to test FP-growth but no Apriori
+#dataSet = './adult.csv'  # N=32561, original dataset
+#dataSet = './adult2.csv' # N=5
+#dataSet = './adult3.csv' # N=20
+#dataSet = './adult4.csv' # N=100
+#dataSet = './adult5.csv' # N=500
+#dataSet = './adult6.csv' # N=1000
+#dataSet = './adult7.csv' # N=2000
+#dataSet = './adult8.csv' # N= 5000
+#dataSet = './adult9.csv' # N= 10000
+#dataSet = './adult10.csv' # N=20000
+
+# Smaller  datasets with different sample size, I made them because Apriori does not work with large samples.
+#dataSet = './adultap10.csv' # N=10
+#dataSet = './adultap20.csv' # N=20
+#dataSet = './adultap30.csv' # N=30
+#dataSet = './adultap40.csv' # N=40
+#dataSet = './adultap50.csv' # N=50
+#dataSet = './adultap60.csv' # N=60
+#dataSet = './adultap70.csv' # N=70
+#dataSet = './adultap80.csv' # N=80
+#dataSet = './adultap90.csv' # N=90
+#dataSet = './adultap100.csv' # N=100
+
+
+# These datasets have same row repeated n times. All of them have N=100
+#dataSet = './adultp1.csv' # row no.1 in adult.data replicated 10 times, the rest rest (90) rows have random rows.
+#dataSet = './adultp2.csv' # row no.1 in adult.data replicated 20 times, the rest rest (80) rows have random rows.
+#dataSet = './adultp3.csv' # row no.1 in adult.data replicated 30 times
+#dataSet = './adultp4.csv' # row no.1 in adult.data replicated 40 times
+#dataSet = './adultp5.csv' # row no.1 in adult.data replicated 50 times
+#dataSet = './adultp6.csv' # row no.1 in adult.data replicated 60 times
+#dataSet = './adultp7.csv' # row no.1 in adult.data replicated 70 times
+#dataSet = './adultp8.csv' # row no.1 in adult.data replicated 80 times
+#dataSet = './adultp9.csv' # row no.1 in adult.data replicated 90 times
+#dataSet = './adultp10.csv' # row no.1 in adult.data replicated 100 times, no random rows.
+
+
+# Datasets with different transaction (attribute) size k. All have N=100
+
+#dataSet = './adultt4.csv' # k=4
+#dataSet = './adultt5.csv' # k=5
+#dataSet = './adultt6.csv' # k=6
+#dataSet = './adultt7.csv' # k=7
+#dataSet = './adultt8.csv' # k=8
+#dataSet = './adultt9.csv' # k=9
+#dataSet = './adultt10.csv' # k=10
+#dataSet = './adultt11.csv' # k=11
+#dataSet = './adultt12.csv' # k=12
+#dataSet = './adultt13.csv' # k=13
+#dataSet = './adultt14.csv' # k=14
+#dataSet = './adultt15.csv' # k=15
