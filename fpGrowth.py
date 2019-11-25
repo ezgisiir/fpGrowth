@@ -14,7 +14,7 @@ start=time.time()
 #dataSet = './adult8.csv'
 #dataSet = './adult9.csv'
 #dataSet = './adult10.csv'
-#dataSet = './adult.data'
+dataSet = './adult.data'
 
 
 #dataSet = './adultap10.csv'
