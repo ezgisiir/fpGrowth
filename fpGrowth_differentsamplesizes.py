@@ -1,62 +1,19 @@
 from fpTree import Tree, ConditionalPatternBase
 import pandas as pd
 from functools import reduce
+#from datetime import datetime
 import time
 
+#dt = datetime.now()
+
+#start = dt.second
 start=time.time()
 
-#dataSet = './adult2.csv'
-#dataSet = './adult3.csv'
-#dataSet = './adult4.csv'
-#dataSet = './adult5.csv'
-#dataSet = './adult6.csv'
-#dataSet = './adult7.csv'
-#dataSet = './adult8.csv'
-#dataSet = './adult9.csv'
-#dataSet = './adult10.csv'
-#dataSet = './adult.data'
-
-
-#dataSet = './adultap10.csv'
-#dataSet = './adultap20.csv'
-#dataSet = './adultap30.csv'
-#dataSet = './adultap40.csv'
-#dataSet = './adultap50.csv'
-#dataSet = './adultap60.csv'
-#dataSet = './adultap70.csv'
-#dataSet = './adultap80.csv'
-#dataSet = './adultap90.csv'
-#dataSet = './adultap100.csv'
-
-#dataSet = './adultp1.csv'
-#dataSet = './adultp2.csv'
-#dataSet = './adultp3.csv'
-#dataSet = './adultp4.csv'
-#dataSet = './adultp5.csv'
-#dataSet = './adultp6.csv'
-#dataSet = './adultp7.csv'
-#dataSet = './adultp8.csv'
-#dataSet = './adultp9.csv'
-#dataSet = './adultp10.csv'
-
-
-#dataSet = './adultt4.csv'
-#dataSet = './adultt5.csv'
-#dataSet = './adultt6.csv'
-#dataSet = './adultt7.csv'
-#dataSet = './adultt8.csv'
-#dataSet = './adultt9.csv'
-#dataSet = './adultt10.csv'
-#dataSet = './adultt11.csv'
-#dataSet = './adultt12.csv'
-#dataSet = './adultt13.csv'
-#dataSet = './adultt14.csv'
-#dataSet = './adultt15.csv'
-
+dataSet = './adult2.csv'
 df = pd.read_csv(dataSet, header=None)
 print(df.shape)
 
-minSupport = 2
+minSupport = 3.256
 colCount = df.shape[1]
 print('Running with min support:', minSupport)
 
